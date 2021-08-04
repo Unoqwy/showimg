@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>..</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #191919;
+        }
+        img {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- very simple yet very useful website -->
+    <img id="image" src=""></img>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("image").src = params.get("image");
+        document.title = params.get("title");
+    </script>
+</body>
+</html>
